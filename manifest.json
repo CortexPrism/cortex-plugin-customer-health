@@ -1,0 +1,30 @@
+{
+  "name": "cortex-plugin-customer-health",
+  "version": "1.0.0",
+  "description": "Customer Health Score Monitor — Gainsight/ChurnZero/Vitally for product usage, NPS, payment history, at-risk detection",
+  "kind": "esm",
+  "entryPoint": "mod.ts",
+  "runtime": "deno",
+  "author": "CortexPrism",
+  "license": "MIT",
+  "repository": "https://github.com/CortexPrism/cortex-plugin-customer-health",
+  "homepage": "https://cortexprism.io/marketplace/plugins/customer-health",
+  "capabilities": ["tools", "network:fetch"],
+  "tools": [
+    {
+      "name": "health_calculate_score",
+      "description": "Calculate customer health score",
+      "params": []
+    },
+    { "name": "health_detect_risk", "description": "Detect at-risk accounts", "params": [] },
+    { "name": "health_suggest_play", "description": "Suggest intervention plays", "params": [] },
+    {
+      "name": "health_track_metrics",
+      "description": "Track health metrics over time",
+      "params": []
+    }
+  ],
+  "dependencies": {},
+  "peerDependencies": { "cortex": ">=1.0.0" },
+  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+}
